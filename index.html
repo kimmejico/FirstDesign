@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+margin:0;
+max-width: 1366px;
+}
+
+h1 {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 190px;
+  padding-right: 195px;
+  padding-top: 20px;
+  padding-bottom: 20px; 
+  overflow: hidden;
+  background-color: yellow;
+  font-family: Verdana;
+
+}
+h2 {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 50px;
+  padding-bottom: 60px; 
+  overflow: hidden;
+  background-color: lightgrey;
+  font-family: Verdana;
+}
+
+h3 {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 190px;
+  padding-right: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+  overflow: hidden;
+  background-color: grey;
+  font-family: Verdana;
+}
+h4 {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 190px;
+  padding-right: 150px;
+  padding-top: 30px;
+  padding-bottom: 60px; 
+  overflow: hidden;
+  background-color: white;
+  font-family: Verdana;
+}
+
+h5 {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 190px;
+  padding-right: 150px;
+  padding-top: 30px;
+  padding-bottom: 60px; 
+  overflow: hidden;
+  background-color: black;
+  font-family: Verdana;
+  border-top: 5px solid yellow;
+}
+
+h6 {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 190px;
+  padding-right: 150px;
+  padding-top: 30px;
+  padding-bottom: 60px; 
+  overflow: hidden;
+  background-color: grey;
+  font-family: Verdana;
+}
+
+LeftNav {
+  float: left;
+}
+
+LeftNav a{
+  display: block;
+  color:black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+
+
+}
+
+LeftNav a:hover:not(.active) {
+  background-color:none;
+}
+
+.active {
+  background-color: none;
+}
+
+RightNav {
+  float: right;
+}
+
+RightNav a {
+  display: block;
+  color:black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 12px;
+
+}
+
+RightNav a:hover:not(.active) {
+  color: red;
+  text-decoration: underline;
+}
+
+.active {
+  background-color: red;
+  
+}
+
+.ImageGallery {
+    background-color: whitesmoke;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+ /*   resize: both;  try 
+ >>originally here  display: inline-block;*/
+    overflow: auto;
+}
+
+div.ImageGallery {
+  margin: auto; 
+  border: 1px solid #ccc;
+  width: 235px;
+
+}
+
+div.ImageGallery:hover {
+  border: 1px solid #777;
+}
+
+div.ImageGallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.title{
+  padding: 5px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+div.desc {
+  padding: 5px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: lighter;
+  line-height: 1.5;
+  color: grey;
+}
+
+arrowleft {
+  position: relative;  
+  background: orange;
+  width: 35px;
+  height: 35px;
+  top: 45px;         /*100px from top relative to its old position*/
+        
+}
+
+#prev {
+  left: 63px;
+  width: 43px;
+  background: url('img_navsprites.gif') -47px 0; /* recheck this*/
+}
+
+div.SeeAll {
+  box-sizing: border-box;
+  background: black;
+  font-size: 12px;
+  text-align: center;
+  color: yellow;  
+  margin:auto;
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+}
+.column {
+  float: left;
+  width: 215px;
+  padding: 10px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+div.title2{
+  padding: 5px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: yellow;
+}
+
+div.desc2 {
+  padding: 5px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: lighter;
+  line-height: 1.5;
+  color: white;
+
+}
+
+.column2 {
+  float: left;
+  width: 290px;
+  padding: 10px;
+}
+
+.columnsmall {
+  float: left;
+  width: 70px;
+  padding: 10px;
+
+}
+
+div.redtext{
+  padding: 5px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+
+}
+
+
+div.whitetext{
+  padding: 5px;
+  text-align: left;
+  font-size: 20px;
+  font-style: bold;
+  font-weight: lighter;
+  color: white;
+  display: inline-block;
+}
+
+div.whitetextitalics{
+  padding: 5px;
+  text-align: left;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: lighter;
+  color: grey;
+}
+div.whitetextsmall{
+  padding: 5px;
+  text-align: left;
+  font-size: 10px;
+  font-style: bold;
+  font-weight: lighter;
+  color: white;
+  display: inline-block;
+}
+div.yellowtextsmall{
+  padding: 5px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: lighter;
+  color: yellow;
+  display: inline-block;
+}
+
+input[type=text], select, textarea {
+  width: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+</style>
+</head>
+<body>
+    
+<h1>
+
+  <img src="SiteLogo.png" alt="SiteLogo" width="60px" height="60px" align="left">
+  <LeftNav><a href="#elegancemedia">ELEGANCE MEDIA</a></LeftNav>
+  <RightNav><a href="#contactus">CONTACT US</a></RightNav>
+  <RightNav><a href="#blog">BLOG</a></RightNav>
+  <RightNav><a href="#portfolio">PORTFOLIO</a></RightNav>
+  <RightNav><a href="#services">SERVICES</a></RightNav>
+  <RightNav><a href="#aboutus">ABOUT US</a></RightNav>
+  <RightNav><a href="#home">HOME</a></RightNav>
+  <br>
+</h1>
+<h2>
+        <img src="ArrowLeft.png" alt="ArrowLeft" width="35px" height="35px" align="Left" >
+  
+      <div class="ImageGallery">
+        <a target="_blank" href="image_spiderman.jpg">
+          <img src="image_spiderman.jpg" alt="Spiderman" width="500" height="742">
+        </a>
+        <div class= "title">Spiderman</div>
+        <div class="desc">Lorem ipsum dolor sit amet.</div>
+      </div>
+      
+      <div class="ImageGallery">
+        <a target="_blank" href="image_captain.jpg">
+          <img src="image_captain.jpg" alt="Captain" width="500" height="742">
+        </a>
+        <div class= "title">Captain Marvel</div>
+        <div class="desc">Lorem ipsum dolor sit amet.</div>
+    </div>
+        
+      <div class="ImageGallery">
+        <a target="_blank" href="image_starwars.jpg">
+          <img src="image_starwars.jpg" alt="Star Wars" width="500" height="742">
+        </a>
+        <div class= "title">Star Wars</div>
+        <div class="desc">Lorem ipsum dolor sit amet.</div>
+      </div>
+      
+      <div class="ImageGallery">
+        <a target="_blank" href="image_justice.jpg">
+            <img src="image_justice.jpg" alt="Justice League" width="500" height="742">
+        </a>
+        <div class= "title">Justice League</div>
+        <div class="desc">Lorem ipsum dolor sit amet.</div>
+      </div>
+      <img src="ArrowRight.png" alt="ArrowRight" width="35px" height="35px" align="right" >
+
+      <div class="SeeAll"> See All Our Works</div>
+</h2>
+<h3>
+    <div class="row">
+    <div class="column" >
+        <div class= "title2"><img src="https://img.icons8.com/color/48/000000/light.png">Your First Title Here</div>
+        <div class="desc2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus optio quasi consectetur accusamus voluptate reiciendis quo debitis reprehenderit ipsum soluta!</div>
+        </div>
+    <div class="column" >
+        <div class= "title2"><img src="https://img.icons8.com/color/48/000000/unlock.png">Your Second Title Here</div>
+        <div class="desc2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, velit sunt unde quasi enim debitis quibusdam pariatur nulla dolore, sequi sit est fugit, delectus quia laboriosam harum temporibus sint nesciunt.</div>
+        </div>
+    <div class="column" >
+        <div class= "title2"><img src="https://img.icons8.com/color/48/000000/pen.png">Your Third Title Here</div>
+        <div class="desc2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus perspiciatis consequuntur expedita accusantium asperiores libero perferendis numquam! Totam nulla delectus impedit laborum eveniet ducimus perspiciatis. Eveniet?</div>
+        </div>
+    <div class="column" >
+        <div class= "title2"><img src="https://img.icons8.com/material-sharp/48/000000/person-male.png">Your Fourth Title Here</div>
+        <div class="desc2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptas eius neque natus ad maiores, animi autem recusandae odio dolore!</div>
+        </div>
+        </div>
+
+</h3>
+<h4>
+        <div class="row">
+                <div class="column2" >
+                    <div class= "title">Our Company</div>
+                    <div class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus optio quasi consectetur accusamus voluptate reiciendis quo debitis reprehenderit ipsum soluta!</div>
+                    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eius vitae ex adipisci voluptate dicta libero a quis rem vero. Enim libero quam maxime id doloremque quaerat, eligendi iusto porro odio non rem, natus reprehenderit iste consequuntur, iure tempore. Eligendi.</div>
+                    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iste voluptatibus aliquid minima, expedita magnam. Doloribus maiores animi nemo officiis incidunt praesentium in deleniti fuga est nulla! Laboriosam unde amet velit fugit placeat eveniet nulla rem asperiores obcaecati, corrupti cum harum quasi accusamus laborum earum libero eius veniam. Ipsum, dolore? </div>
+                </div>
+                   
+                <div class="column2" >
+                    <div class= "title">Our Company</div>
+                    <div class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus optio quasi consectetur accusamus voluptate reiciendis quo debitis reprehenderit ipsum soluta!</div>
+                    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eius vitae ex adipisci voluptate dicta libero a quis rem vero. Enim libero quam maxime id doloremque quaerat, eligendi iusto porro odio non rem, natus reprehenderit iste consequuntur, iure tempore. Eligendi.</div>
+                     <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iste voluptatibus aliquid minima, expedita magnam. Doloribus maiores animi nemo officiis incidunt praesentium in deleniti fuga est nulla! Laboriosam unde amet velit fugit placeat eveniet nulla rem asperiores obcaecati, corrupti cum harum quasi accusamus laborum earum libero eius veniam. Ipsum, dolore? </div>
+                </div>
+                <div class="column2" >
+                    <div class= "title">From The Blog</div>
+                    <div class="redtext">Sleek minimal websiite PSD template</div>
+                    <div class="whitetextitalics">August 30, 2010, 9:32am</div>
+                    <div class="redtext">PSD ecommerce website template</div>
+                    <div class="whitetextitalics">October 18, 2010, 5:51am</div>
+                    <div class="redtext">Sleeko- Download single page website design</div>
+                    <div class="whitetextitalics">July 22, 2010, 7:19am</div>
+                    <div class="redtext">Download web buttons in PSD & PNG (pack of 60)</div>
+                    <div class="whitetextitalics">September 13, 2010, 2:15am</div>
+                    <div class="redtext">Flip clock countdown(PSD)</div>
+                    <div class="whitetextitalics">August 12, 2011, 10:56am</div>
+                    </div>
+            </div>
+</h4>
+<h5>
+<div class="row">
+<div class="column" >
+<div class= "whitetext">Newsletter sign up </div>
+</div>
+<div class="column">
+<form><input type="text" name="emailad" placeholder="email address"></form>
+</div>
+<div class="columnsmall">
+    <img src="yellowcanary.png" alt="SiteLogo" width="45x" height="30px" align="left">
+</div>    
+<div class="column">
+<div class="whitetextsmall">Lorem ipsum dolor sit amet consectetur.</div>
+</div>
+<div class="columnsmall">
+<div class="yellowtextsmall">@graphicsfuel</div>
+</div>
+</div>
+</h5>
+<h6>
+<div class="row">
+    <div class="column" >
+        <div class= "whitetext">Company</div>
+        <div class="desc2">Home<br>About Us<br>Services<br>Products<br>Blog<br>Contact Us</div>
+        </div>
+     <div class="column" >
+          <div class= "whitetext">Social Network</div>
+          <div class="desc2">Find us on these social network sites</div>
+          <img src="https://img.icons8.com/ios/50/000000/facebook-filled.png">
+          <img src="https://img.icons8.com/ios/50/000000/twitter-filled.png">
+          <img src="https://img.icons8.com/ios/50/000000/tumblr-filled--v1.png">
+          <img src="https://img.icons8.com/ios/50/000000/youtube-filled.png">
+        </div>
+     <div class="column" >
+        <div class= "whitetext">Location</div>
+        <div class="desc2">123, street name<br>landmark<br> California 123<br>Tel: 123-456-7890<br>Fax. +123-456-7890</div>
+        </div>
+    <div class="column" >
+        <div class= "whitetext">Text Widget</div>
+        <div class="desc2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi est voluptatum voluptatibus ducimus ullam nam sit aspernatur, consectetur labore perferendis?</div>
+        </div>
+        </div>
+
+
+</h6>
+</body>
+</html>
