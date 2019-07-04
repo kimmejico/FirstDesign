@@ -23,7 +23,7 @@ h1 {
 h2 {
   list-style-type: none;
   margin: 0;
-  padding-left: 150px;
+  padding-left: 190px;
   padding-right: 150px;
   padding-top: 50px;
   padding-bottom: 60px; 
@@ -170,19 +170,17 @@ div.desc {
   color: grey;
 }
 
-arrowleft {
-  position: relative;  
-  background: orange;
-  width: 35px;
-  height: 35px;
-  top: 45px;         /*100px from top relative to its old position*/
+div.arrowleft {
+  position: absolute;  
+  top: 330px;         /*100px from top relative to its old position*/
+  left: 140px;
         
 }
-
-#prev {
-  left: 63px;
-  width: 43px;
-  background: url('img_navsprites.gif') -47px 0; /* recheck this*/
+div.arrowright {
+  position: absolute;  
+  top: 330px;         /*100px from top relative to its old position*/
+  left: 1166px;
+        
 }
 
 div.SeeAll {
@@ -191,6 +189,9 @@ div.SeeAll {
   font-size: 12px;
   text-align: center;
   color: yellow;  
+  position: absolute;
+  top: 600px;
+  left:580px;
   margin:auto;
   width: 200px;
   height: 50px;
@@ -200,7 +201,6 @@ div.SeeAll {
   float: left;
   width: 215px;
   padding: 10px;
-
 }
 
 /* Clear floats after the columns */
@@ -312,8 +312,8 @@ input[type=text], select, textarea {
   <br>
 </h1>
 <h2>
-        <img src="ArrowLeft.png" alt="ArrowLeft" width="35px" height="35px" align="Left" >
-  
+      <div class="arrowleft"><img src="ArrowLeft.png" alt="ArrowLeft" width="35px" height="35px" align="Left" >
+      </div>
       <div class="ImageGallery">
         <a target="_blank" href="image_spiderman.jpg">
           <img src="image_spiderman.jpg" alt="Spiderman" width="500" height="742">
@@ -345,8 +345,8 @@ input[type=text], select, textarea {
         <div class= "title">Justice League</div>
         <div class="desc">Lorem ipsum dolor sit amet.</div>
       </div>
-      <img src="ArrowRight.png" alt="ArrowRight" width="35px" height="35px" align="right" >
-
+      <div class="arrowright"><img src="ArrowRight.png" alt="ArrowRight" width="35px" height="35px" align="Left" >
+      </div>
       <div class="SeeAll"> See All Our Works</div>
 </h2>
 <h3>
@@ -371,39 +371,39 @@ input[type=text], select, textarea {
 
 </h3>
 <h4>
-        <div class="row">
-                <div class="column2" >
-                    <div class= "title">Our Company</div>
-                    <div class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus optio quasi consectetur accusamus voluptate reiciendis quo debitis reprehenderit ipsum soluta!</div>
-                    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eius vitae ex adipisci voluptate dicta libero a quis rem vero. Enim libero quam maxime id doloremque quaerat, eligendi iusto porro odio non rem, natus reprehenderit iste consequuntur, iure tempore. Eligendi.</div>
-                    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iste voluptatibus aliquid minima, expedita magnam. Doloribus maiores animi nemo officiis incidunt praesentium in deleniti fuga est nulla! Laboriosam unde amet velit fugit placeat eveniet nulla rem asperiores obcaecati, corrupti cum harum quasi accusamus laborum earum libero eius veniam. Ipsum, dolore? </div>
-                </div>
+<div class="row">
+    <div class="column2" >
+    <div class= "title">Our Company</div>
+    <div class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus optio quasi consectetur accusamus voluptate reiciendis quo debitis reprehenderit ipsum soluta!</div>
+    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eius vitae ex adipisci voluptate dicta libero a quis rem vero. Enim libero quam maxime id doloremque quaerat, eligendi iusto porro odio non rem, natus reprehenderit iste consequuntur, iure tempore. Eligendi.</div>
+    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iste voluptatibus aliquid minima, expedita magnam. Doloribus maiores animi nemo officiis incidunt praesentium in deleniti fuga est nulla! Laboriosam unde amet velit fugit placeat eveniet nulla rem asperiores obcaecati, corrupti cum harum quasi accusamus laborum earum libero eius veniam. Ipsum, dolore? </div>
+    </div>
                    
-                <div class="column2" >
-                    <div class= "title">Our Company</div>
-                    <div class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus optio quasi consectetur accusamus voluptate reiciendis quo debitis reprehenderit ipsum soluta!</div>
-                    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eius vitae ex adipisci voluptate dicta libero a quis rem vero. Enim libero quam maxime id doloremque quaerat, eligendi iusto porro odio non rem, natus reprehenderit iste consequuntur, iure tempore. Eligendi.</div>
-                     <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iste voluptatibus aliquid minima, expedita magnam. Doloribus maiores animi nemo officiis incidunt praesentium in deleniti fuga est nulla! Laboriosam unde amet velit fugit placeat eveniet nulla rem asperiores obcaecati, corrupti cum harum quasi accusamus laborum earum libero eius veniam. Ipsum, dolore? </div>
-                </div>
-                <div class="column2" >
-                    <div class= "title">From The Blog</div>
-                    <div class="redtext">Sleek minimal websiite PSD template</div>
-                    <div class="whitetextitalics">August 30, 2010, 9:32am</div>
-                    <div class="redtext">PSD ecommerce website template</div>
-                    <div class="whitetextitalics">October 18, 2010, 5:51am</div>
-                    <div class="redtext">Sleeko- Download single page website design</div>
-                    <div class="whitetextitalics">July 22, 2010, 7:19am</div>
-                    <div class="redtext">Download web buttons in PSD & PNG (pack of 60)</div>
-                    <div class="whitetextitalics">September 13, 2010, 2:15am</div>
-                    <div class="redtext">Flip clock countdown(PSD)</div>
-                    <div class="whitetextitalics">August 12, 2011, 10:56am</div>
-                    </div>
-            </div>
+    <div class="column2" >
+    <div class= "title">Our Company</div>
+    <div class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus optio quasi consectetur accusamus voluptate reiciendis quo debitis reprehenderit ipsum soluta!</div>
+    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eius vitae ex adipisci voluptate dicta libero a quis rem vero. Enim libero quam maxime id doloremque quaerat, eligendi iusto porro odio non rem, natus reprehenderit iste consequuntur, iure tempore. Eligendi.</div>
+    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iste voluptatibus aliquid minima, expedita magnam. Doloribus maiores animi nemo officiis incidunt praesentium in deleniti fuga est nulla! Laboriosam unde amet velit fugit placeat eveniet nulla rem asperiores obcaecati, corrupti cum harum quasi accusamus laborum earum libero eius veniam. Ipsum, dolore? </div>
+    </div>
+    <div class="column2" >
+    <div class= "title">From The Blog</div>
+    <div class="redtext">Sleek minimal websiite PSD template</div>
+    <div class="whitetextitalics">August 30, 2010, 9:32am</div>
+    <div class="redtext">PSD ecommerce website template</div>
+    <div class="whitetextitalics">October 18, 2010, 5:51am</div>
+    <div class="redtext">Sleeko- Download single page website design</div>
+    <div class="whitetextitalics">July 22, 2010, 7:19am</div>
+    <div class="redtext">Download web buttons in PSD & PNG (pack of 60)</div>
+    <div class="whitetextitalics">September 13, 2010, 2:15am</div>
+    <div class="redtext">Flip clock countdown(PSD)</div>
+    <div class="whitetextitalics">August 12, 2011, 10:56am</div>
+    </div>
+</div>
 </h4>
 <h5>
 <div class="row">
 <div class="column" >
-<div class= "whitetext">Newsletter sign up </div>
+<div class= "whitetext">Newsletter sign up</div>
 </div>
 <div class="column">
 <form><input type="text" name="emailad" placeholder="email address"></form>
@@ -428,6 +428,7 @@ input[type=text], select, textarea {
      <div class="column" >
           <div class= "whitetext">Social Network</div>
           <div class="desc2">Find us on these social network sites</div>
+          <!-- <a target="_blank" href="https://facebook.com"></a> -->
           <img src="https://img.icons8.com/ios/50/000000/facebook-filled.png">
           <img src="https://img.icons8.com/ios/50/000000/twitter-filled.png">
           <img src="https://img.icons8.com/ios/50/000000/tumblr-filled--v1.png">
